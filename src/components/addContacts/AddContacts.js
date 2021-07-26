@@ -5,6 +5,7 @@ import styles from "./AddContacts.module.css";
 
 export class AddContacts extends Component {
     state = {
+        id: uuidv4(),
         name: '',
         number: '',
     }
@@ -37,7 +38,6 @@ export class AddContacts extends Component {
                             className={styles.input}
                             type="text"
                             name="name"
-                            id={uuidv4()}
                             value={name}
                             onChange={this.handleChange}
                             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -51,7 +51,6 @@ export class AddContacts extends Component {
                             className={styles.input}
                             type="tel"
                             name="number"
-                            id={uuidv4()}
                             value={number}
                             onChange={this.handleChange}
                             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
