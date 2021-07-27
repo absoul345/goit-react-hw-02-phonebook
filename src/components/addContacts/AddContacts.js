@@ -5,6 +5,7 @@ import styles from "./AddContacts.module.css";
 
 export class AddContacts extends Component {
     state = {
+        id: uuidv4(),
         name: '',
         number: '',
     }

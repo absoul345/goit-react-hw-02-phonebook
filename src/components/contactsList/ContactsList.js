@@ -7,7 +7,9 @@ const ContactsList = ({ contacts, filter, changeFilter, onDeleteContact }) => (
     <>
         <Filter filter={filter} changeFilter={changeFilter} />
         <ul>
-            <ContactsItem contacts={contacts} onDeleteContact={onDeleteContact} />
+            {contacts.map((contact) => (
+                <ContactsItem key={contact.id} contact={contact} onDeleteContact={onDeleteContact} />
+            ))}
         </ul>
     </>
 );

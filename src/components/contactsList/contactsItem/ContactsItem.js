@@ -3,11 +3,11 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from './ContactsItem.module.css';
 import PropTypes from "prop-types";
 
-const ContactsItem = ({ contacts, onDeleteContact }) => {
+const ContactsItem = ({ contact, onDeleteContact }) => {
+    const { name, number, id } = contact;
     return (
         <>
-            {contacts.map(({ name, number, id }) => (<li className={styles.contact__Item} key={uuidv4()}><p>{name}:{number}<button className={styles.contacts__ItemBtn} onClick={() => onDeleteContact(id)}> Delete</button></p></li>
-            ))}
+            <li className={styles.contact__Item} key={uuidv4()}><p>{name}:{number}<button className={styles.contacts__ItemBtn} onClick={() => onDeleteContact(id)}> Delete</button></p></li>
         </>
     )
 }
