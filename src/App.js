@@ -1,10 +1,12 @@
-import React from "react";
-import Phonebook from "./components/phonebook/Phonebook";
+import React from 'react';
+import Phonebook from './components/phonebook/Phonebook';
 
 const App = () => {
-  return <>
-    <Phonebook />
-  </>;
+  return (
+    <>
+      <Phonebook />
+    </>
+  );
 };
 
 export default App;
